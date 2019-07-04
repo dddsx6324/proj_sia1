@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <rosparam command="load" file="$(find fetch_train)/config/sia_fetchsimple_n1try.yaml" />
+    <!-- Launch the training system -->
+    <node pkg="fetch_train" name="fetchsimple_n1try_algorithm" type="sia_fetchsimple_n1try.py" output="screen"/>
+</launch>
