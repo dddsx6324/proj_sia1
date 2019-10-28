@@ -1,10 +1,10 @@
 sia_fetch: #namespace
 
     #qlearn parameters
-    task_and_robot_environment_name: 'SIA_FetchSimpleTest-v0'
+    task_and_robot_environment_name: 'FetchSimpleTest-v0'
     ros_ws_abspath: "/home/zzy/catkin_fetch"
     n_actions: 14 # X+/-,Y+/-,Z+/-
-    n_observations: 3 # XYZ of the TCP and the distance from GOAL
+    n_observations: 7 # XYZ of the TCP and the distance from GOAL
     episodes_training: 40
     episodes_running: 10
     max_iterations: 10

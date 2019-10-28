@@ -38,9 +38,9 @@ class DQNRobotSolver():
         self.batch_size = batch_size
         self.quiet = quiet
         
-        #if monitor:
-        #    self._env = gym.wrappers.Monitor(
-        #        self._env, '/home/catkin_fetch/src/fetch_train/data', force=True)
+        if monitor:
+            self._env = gym.wrappers.Monitor(
+                self._env, '../data/fetch-1', force=True)
 
         if max_env_steps is not None:
             self._env._max_episode_steps = max_env_steps
@@ -144,6 +144,7 @@ class DQNRobotSolver():
 
             if do_train:
                 self.replay(self.batch_size)
+                print('replay finish')
 
         if not self.quiet:
             print('Did not solve after {} episodes'.format(e))
@@ -205,14 +206,16 @@ if __name__ == '__main__':
                   str(task_and_robot_environment_name))
     openai_ros_env_object = StartOpenAI_ROS_Environment(
         task_and_robot_environment_name)
-    #print("##########################  task_and_robot_environment_name  ########################################")
-    #print(task_and_robot_environment_name)  
+     
     rospy.loginfo("Starting Learning")
 
     rospackage_name = "fetch_train"
     model_name = "sia_fetch_n1try"
 
     n_observations = rospy.get_param('/sia_fetch/n_observations')
+    #print("##########################  n_observations  ########################################")
+    #print(n_observations) 
+
     n_actions = rospy.get_param('/sia_fetch/n_actions')
      
 

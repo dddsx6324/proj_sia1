@@ -57,13 +57,9 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
- add_service_files(
-   FILES
-   EePose.srv
-   EeRpy.srv
-   EeTraj.srv
-   JointTraj.srv
- )
+ #add_service_files(
+ #  FILES
+ #)
 
 ## Generate actions in the 'action' folder
 # add_action_files(

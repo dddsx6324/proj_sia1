@@ -3,4 +3,7 @@
     <rosparam command="load" file="$(find fetch_train)/config/sia_fetchsimple_n1try.yaml" />
     <!-- Launch the training system -->
     <node pkg="fetch_train" name="fetchsimple_n1try_algorithm" type="sia_fetchsimple_n1try.py" output="screen"/>
+    
+<node name="urdf_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file /home/zzy/catkin_fetch/src/cube.urdf  -urdf -x 0.25 -y 1 -model my_object2" />
+  <node name="sdf_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file /usr/share/gazebo-7/models/demo_cube/model.sdf  -sdf -y 1.0 -z 0.5 -model grasp_cube" />
 </launch>
