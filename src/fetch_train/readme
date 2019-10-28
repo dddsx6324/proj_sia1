@@ -1,0 +1,3 @@
+rosrun gazebo_ros spawn_model -file /home/zzy/catkin_fetch/src/cube.urdf -urdf -x 0.25 -y 1 -model my_object2
+rosrun gazebo_ros spawn_model -database demo_cube -gazebo -model grasp_cube -x 0 -y 1.0 -z 0.3
+rosrun gazebo_ros spawn_model -database coke_can -gazebo -model grasp_can -x 0 -y 1.0 -z 0.3

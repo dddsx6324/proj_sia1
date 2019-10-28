@@ -1,0 +1,45 @@
+sia_7f_arm:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+  # Position Controllers ---------------------------------------
+  joint1_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sia_7f_joint1
+    
+  joint2_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sia_7f_joint2
+    
+  joint3_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sia_7f_joint3
+    
+  joint4_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sia_7f_joint4
+    
+  joint5_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sia_7f_joint5
+    
+  joint6_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sia_7f_gripper
+    
+  joint7_position_controller:
+    type: position_controllers/JointPositionController
+    joint: sia_7f_finger_joint
+
+/sia_7f_arm/gazebo_ros_control/pid_gains: 
+  sia_7f_joint1: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0} 
+  sia_7f_joint2: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0} 
+  sia_7f_joint3: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0} 
+  sia_7f_joint4: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0} 
+  sia_7f_joint5: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0} 
+  sia_7f_gripper: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0} 
+  sia_7f_finger_joint: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+
+

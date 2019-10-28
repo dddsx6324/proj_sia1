@@ -1,0 +1,15 @@
+sia_7f_arm:
+  sia_7f_arm_joint_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+       - sia_7f_joint1
+       - sia_7f_joint2
+       - sia_7f_joint3
+       - sia_7f_joint4
+       - sia_7f_joint5
+       - sia_7f_gripper
+
+  gripper_controller:
+     type: "position_controllers/JointTrajectoryController"
+     joints:
+       - sia_7f_finger_joint

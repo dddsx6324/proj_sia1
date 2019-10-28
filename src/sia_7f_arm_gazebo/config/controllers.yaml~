@@ -1,0 +1,21 @@
+controller_manager_ns: controller_manager
+controller_list:
+  - name: siarobot/siarobot_joint_controller
+	action_ns: follow_joint_trajectory
+	type: FollowJointTrajectory
+	default: true
+	joints:
+	  - joint1
+  	- joint2
+  	- joint3
+ 	  - joint4
+  	- joint5
+   	- joint6
+
+  - name: siarobot/siarobot_gripper_controller
+	action_ns: follow_joint_trajectory
+	type: FollowJointTrajectory
+	default: true
+    joints:
+      - joint_gripper_l
+      - joint_gripper_r

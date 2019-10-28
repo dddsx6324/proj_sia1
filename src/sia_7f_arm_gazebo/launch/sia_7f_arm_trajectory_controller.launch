@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>  
+  <rosparam file="$(find sia_7f_arm_gazebo)/config/trajectory_control.yaml" command="load"/>  
+  
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/sia_7f_arm" args="sia_7f_arm_joint_controller gripper_controller"/> 
+  
+</launch> 
